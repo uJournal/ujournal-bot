@@ -14,5 +14,5 @@
 
 module.exports = async (url, content) => {
   const { url } = content;
-  return { url };
+  return { body: `![Юцика кожен день](${url})` };
 };

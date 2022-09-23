@@ -13,6 +13,7 @@
 6. Продовження конфігурувння нової кронджоби: нижче йде секція Advanced, вибрати Request method: POST і вказати Request body (наведено нижче)
 
 Request body (приклад). Цей реквест-баді додає новий запис у спільноту Словотвір (запускає функції `fetchSlovotvirContent` та `createSlovotvirPost`):
+
 ```json
 {
   "event_type": "Trigger",
@@ -24,5 +25,3 @@ Request body (приклад). Цей реквест-баді додає нов�
   }
 }
 ```
-
-<img src="https://ia802807.us.archive.org/BookReader/BookReaderImages.php?zip=/32/items/fondorlatosjucika/Fondorlatos%20Jucika_jp2.zip&file=Fondorlatos%20Jucika_jp2/Fondorlatos%20Jucika_0322.jp2&id=fondorlatosjucika&scale=0&rotate=0" />
