@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./index.js"
+    "start": "LEMMY_API_URL=https://ujournal.com.ua/api/v3/ node ./index.js"
   },
   "author": "",
   "license": "ISC",

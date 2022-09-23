@@ -17,7 +17,6 @@ jobs:
       - name: Run script
         run: npm start
         env:
-          LEMMY_API_URL: ${{ secrets.LEMMY_API_URL }}
           USERNAME_OR_EMAIL: ${{ github.event.client_payload.USERNAME_OR_EMAIL }}
           PASSWORD: ${{ github.event.client_payload.PASSWORD }}
           COMMUNITY_ID: ${{ github.event.client_payload.COMMUNITY_ID }}
