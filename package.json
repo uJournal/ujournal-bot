@@ -1,0 +1,17 @@
+{
+  "name": "ujournal-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "date-fns": "^2.29.3",
+    "jsdom": "^20.0.0",
+    "lodash": "^4.17.21"
+  }
+}
