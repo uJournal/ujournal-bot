@@ -13,6 +13,6 @@
 */
 
 module.exports = async (url, content) => {
-  const { url } = content;
-  return { body: `![Юцика кожен день](${url})` };
+  const { url: _url } = content;
+  return { body: `![Юцика кожен день](${_url})` };
 };
