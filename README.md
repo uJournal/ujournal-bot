@@ -8,7 +8,7 @@
 1. Склонувати [репозіторій бота](https://github.com/uJournal/ujournal-bot)
 2. Сгенерувати `ВАШ_ГІТХАБ_PERSONAL_TOKEN` по [цій інструкції](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 3. Зареєструватись на [cron-job.org](https://cron-job.org/en/) та почати створення Кронджобу (Cronjobs)
-4. Продовження конфігурувння нової кронджоби: додати назву, та додати URL `https://api.github.com/repos/<ВАШ_ГІТХАБ_ЮЗЕРНЕЙТ>/<РЕПОЗІТОРІЙ_БОТА>/dispatches`
+4. Продовження конфігурувння нової кронджоби: додати назву, та додати URL `https://api.github.com/repos/<ВАШ_ГІТХАБ_ЮЗЕРНЕЙМ>/<РЕПОЗІТОРІЙ_БОТА>/dispatches`
 5. Продовження конфігурувння нової кронджоби: перейти в розділі ADVANCED і додати заголовок до Headers. Вказати Key: `authorization` Value: `Bearer <ВАШ_ГІТХАБ_PERSONAL_TOKEN>`
 6. Продовження конфігурувння нової кронджоби: нижче йде секція Advanced, вибрати Request method: POST і вказати Request body (наведено нижче)
 
