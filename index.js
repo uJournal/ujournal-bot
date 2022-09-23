@@ -4,6 +4,7 @@ const url = require("url");
 const contentFetchers = require("./contentFetchers");
 const postCreators = require("./postCreators");
 
+// function: for sign in by username/email and password
 const signIn = async (usernameOrEmail, password) => {
   const url = `${process.env.LEMMY_API_URL}/user/login`;
 
@@ -23,6 +24,12 @@ const createLemmyPost = async (data, communityId, authToken) => {
     },
     data
   );
+
+  if (!_data.url && !_data.name && !_data.body && !_data.community_id) {
+    throw new Error(
+      "Can't create post. Fields url, name, body, community_id are required."
+    );
+  }
 
   console.log(_data);
 

@@ -1,6 +1,16 @@
 const { format } = require("date-fns");
 const axios = require("axios");
 
+/*
+  Вхідні данні:
+  targetUrl - URL який був переданий до Github Action
+
+  Функція повинна повернути якийсь контент:
+  {
+    "key": "value"
+  }
+*/
+
 module.exports = async (targetUrl) => {
   const response = await axios.get(targetUrl);
 

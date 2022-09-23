@@ -1,5 +1,3 @@
-const { shuffle } = require("lodash");
-
 /*
   Вхідні данні:
   url - URL який був переданий до Github Action
@@ -15,6 +13,6 @@ const { shuffle } = require("lodash");
 */
 
 module.exports = async (url, content) => {
-  const [{ messageUrl }] = shuffle(content).slice(0, 1);
-  return { url: messageUrl };
+  const { url } = content;
+  return { url };
 };
