@@ -69,7 +69,7 @@ const main = async () => {
     throw new Error("URL is not supported.");
   }
 
-  console.log("[info]: Fetching content...");
+  console.log(`[info]: Fetching content (${targetUrl})...`);
   const content = await fetchContent(targetUrl);
 
   if (content.length === 0) {
@@ -77,7 +77,7 @@ const main = async () => {
   }
 
   console.log("[info]: Creating post...");
-  const post = await createPost(url, content);
+  const post = await createPost(targetUrl, content);
 
   console.log("[info]: Push post to API...");
   const {
