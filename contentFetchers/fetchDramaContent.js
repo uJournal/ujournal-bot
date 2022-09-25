@@ -1,6 +1,8 @@
 const axios = require("axios");
 const jsdom = require("jsdom");
 
+const { JSDOM } = jsdom;
+
 /*
   Вхідні данні:
   targetUrl - URL який був переданий до Github Action
