@@ -21,8 +21,8 @@ module.exports = async (url, content) => {
     name: title,
     body: tomorrowReleases
       .map(
-        ({ title, image, description, date }) =>
-          `*${title}* (${format(date, "EEEE", {
+        ({ title, image, description, date, url }) =>
+          `[**${title}**](${url}) (${format(date, "EEEE", {
             locale: uk,
           })}, ${format(date, "d LLL", {
             locale: uk,
