@@ -18,11 +18,11 @@ const uk = require("date-fns/locale/uk");
 module.exports = async (url, content) => {
   const { title, tomorrowReleases } = content;
   return {
-    title,
+    name: title,
     body: tomorrowReleases
       .map(
         ({ title, image, description, date }) =>
-          `_${title}_ (${format(date, "EEEE", {
+          `*${title}* (${format(date, "EEEE", {
             locale: uk,
           })}, ${format(date, "d LLL", {
             locale: uk,
