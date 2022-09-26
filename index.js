@@ -62,8 +62,9 @@ const main = async () => {
 
   console.log("[info]: Choosing content fetcher and post creator...");
   const { hostname } = url.parse(targetUrl);
-  const fetchContent = contentFetchers[hostname];
-  const createPost = postCreators[hostname];
+  const _hostname = hostname.replace("www.", "");
+  const fetchContent = contentFetchers[_hostname];
+  const createPost = postCreators[_hostname];
 
   if (!fetchContent || !createPost) {
     throw new Error("URL is not supported.");

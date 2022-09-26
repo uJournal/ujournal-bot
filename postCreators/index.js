@@ -4,4 +4,5 @@ module.exports = {
   "jucika.com.ua": require("./createJucikaPost"),
   "drama.kropyva.ch": require("./createDramaPost"),
   "epravda.com.ua": require("./createEconomicPravdaPost"),
+  "imdb.com": require("./createImdbPost"),
 };

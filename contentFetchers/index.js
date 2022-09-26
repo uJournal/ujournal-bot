@@ -4,4 +4,5 @@ module.exports = {
   "jucika.com.ua": require("./fetchJucikaContent"),
   "drama.kropyva.ch": require("./fetchDramaContent"),
   "epravda.com.ua": require("./fetchEconomicPravdaContent"),
+  "imdb.com": require("./fetchImdbContent"),
 };
