@@ -17,17 +17,22 @@ const uk = require("date-fns/locale/uk");
 
 module.exports = async (url, content) => {
   const { title, tomorrowReleases } = content;
-  return {
-    name: title,
-    body: tomorrowReleases
-      .map(
-        ({ title, image, description, date, url }) =>
-          `[**${title}**](${url}) (${format(date, "EEEE", {
-            locale: uk,
-          })}, ${format(date, "d LLL", {
-            locale: uk,
-          })}) \n![${title}](${image})\n${description}`
-      )
-      .join("\n\n"),
-  };
+
+  if (tomorrowReleases.length > 0) {
+    return {
+      name: title,
+      body: tomorrowReleases
+        .map(
+          ({ title, image, description, date, url }) =>
+            `[**${title}**](${url}) (${format(date, "EEEE", {
+              locale: uk,
+            })}, ${format(date, "d LLL", {
+              locale: uk,
+            })}) \n![${title}](${image})\n${description}`
+        )
+        .join("\n\n"),
+    };
+  }
+
+  return undefined;
 };
