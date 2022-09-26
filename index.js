@@ -73,10 +73,6 @@ const main = async () => {
   console.log(`[info]: Fetching content (${targetUrl})...`);
   const content = await fetchContent(targetUrl);
 
-  if (content.length === 0) {
-    throw new Error("Content is absent.");
-  }
-
   console.log("[info]: Creating post...");
   const post = await createPost(targetUrl, content);
 

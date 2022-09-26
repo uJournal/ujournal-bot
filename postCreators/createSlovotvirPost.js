@@ -15,14 +15,18 @@ const { shuffle } = require("lodash");
 */
 
 module.exports = async (url, content) => {
-  const [{ word, translation, url: translationUrl }] = shuffle(content).slice(
-    0,
-    1
-  );
+  if (content.length > 0) {
+    const [{ word, translation, url: translationUrl }] = shuffle(content).slice(
+      0,
+      1
+    );
 
-  return {
-    name: "...",
-    url: translationUrl,
-    body: `> ${word} ⮂ ${translation}`,
-  };
+    return {
+      name: "...",
+      url: translationUrl,
+      body: `> ${word} ⮂ ${translation}`,
+    };
+  }
+
+  return undefined;
 };
