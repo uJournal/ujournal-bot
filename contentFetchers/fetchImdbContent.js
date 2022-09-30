@@ -15,13 +15,14 @@ module.exports = async (targetUrl) => {
     const releases = [];
 
     const title = await translate(
-      dom.window.document.querySelector("h1").textContent,
+      dom.window.document.body.querySelector("h1")?.textContent ||
+        "Upcoming releases",
       { from: "en", to: "uk" }
     );
 
     let date = null;
 
-    Array.from(dom.window.document.querySelectorAll("#main > *")).forEach(
+    Array.from(dom.window.document.body.querySelectorAll("#main > *")).forEach(
       (el) => {
         if (el.tagName.toUpperCase() === "H4") {
           date = new Date(Date.parse(el.textContent.trim()));

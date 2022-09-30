@@ -23,12 +23,12 @@ module.exports = async (url, content) => {
       name: title,
       body: tomorrowReleases
         .map(
-          ({ title, image, description, date, url }) =>
+          ({ title, image, date, url }) =>
             `[**${title}**](${url}) (дата релізу ${format(date, "EEEE", {
               locale: uk,
             })}, ${format(date, "d LLL", {
               locale: uk,
-            })}) \n![${title}](${image})\n${description}`
+            })}) \n![${title}](${image})`
         )
         .join("\n\n"),
     };
