@@ -48,9 +48,7 @@ module.exports = async (targetUrl) => {
     );
 
     const _todayReleases = releases.filter(
-      ({ date }) =>
-        format(new Date(date), "P") ===
-        format(add(new Date(), { days: 1 }), "P")
+      ({ date }) => format(new Date(date), "P") === format(new Date(), "P")
     );
 
     const tomorrowReleases = [];

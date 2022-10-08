@@ -35,7 +35,7 @@ module.exports = async (targetUrl) => {
           url: `${baseUrl}${item.href}`,
           time:
             child.querySelector(".article__time")?.textContent.trim() || null,
-          date: `${year}-${month}-${day}`,
+          date: `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`,
           important,
         });
       }
