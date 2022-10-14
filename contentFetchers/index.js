@@ -5,4 +5,5 @@ module.exports = {
   "drama.kropyva.ch": require("./fetchDramaContent"),
   "epravda.com.ua": require("./fetchEconomicPravdaContent"),
   "imdb.com": require("./fetchImdbContent"),
+  "uareview.com": require("./fetchUareviewContent"),
 };

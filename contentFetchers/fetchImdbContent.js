@@ -2,7 +2,7 @@ const axios = require("axios");
 const jsdom = require("jsdom");
 const translate = require("translate-google");
 const { makeAbsoluteUrl } = require("../utils/url");
-const { format, add } = require("date-fns");
+const { format } = require("date-fns");
 
 const { JSDOM } = jsdom;
 

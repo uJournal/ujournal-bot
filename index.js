@@ -73,20 +73,24 @@ const main = async () => {
   console.log(`[info]: Fetching content (${targetUrl})...`);
   const content = await fetchContent(targetUrl);
 
-  console.log("[info]: Creating post...");
+  console.log("[info]: Creating post(s)...");
   const post = await createPost(targetUrl, content);
 
   if (post) {
-    console.log("[info]: Push post to API...");
-    const {
-      data: {
-        post_view: { post: postView },
-      },
-    } = await createLemmyPost(post, communityId, authToken);
+    console.log("[info]: Push post(s) to API...");
+    const posts = post instanceof Array ? post : [post];
 
-    console.log(
-      `[info]: Post URL: https://ujournal.com.ua/new/post/?postId=${postView.id}`
-    );
+    for (let post of posts) {
+      const {
+        data: {
+          post_view: { post: _post },
+        },
+      } = await createLemmyPost(post, communityId, authToken);
+
+      console.log(
+        `[info]: Post URL: https://ujournal.com.ua/new/post/?postId=${_post.id}`
+      );
+    }
   } else {
     console.log("[info]: Creator returns empty post. Post doesn't created.");
   }
