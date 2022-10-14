@@ -28,7 +28,7 @@ module.exports = async (targetUrl) => {
 
       if (
         format(new Date(date), "P") !==
-        format(sub(new Date(), { days: 1 }), "P")
+        format(sub(new Date(), { days: 10 }), "P")
       ) {
         continue;
       }
