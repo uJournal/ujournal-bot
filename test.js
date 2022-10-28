@@ -9,10 +9,10 @@ const createUareviewPost = require("./postCreators/createUareviewPost");
 
 (async () => {
   // jucika
-  // const targetUrl = "https://jucika.com.ua";
-  // const content = await fetchJucikaContent(targetUrl);
-  // console.log(content);
-  // console.log(await createJucikaPost(targetUrl, content));
+  const targetUrl = "https://jucika.com.ua";
+  const content = await fetchJucikaContent(targetUrl);
+  console.log(content);
+  console.log(await createJucikaPost(targetUrl, content));
   // epravda
   // const targetUrl = "https://www.epravda.com.ua/";
   // const content = await fetchEconomicPravdaContent(targetUrl);
